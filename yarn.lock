@@ -949,10 +949,10 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "6.1.1"
 
-"@fortawesome/react-fontawesome@^0.1.18":
-  version "0.1.18"
-  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.18.tgz#dae37f718a24e14d7a99a5496c873d69af3fbd73"
-  integrity sha512-RwLIB4TZw0M9gvy5u+TusAA0afbwM4JQIimNH/j3ygd6aIvYPQLqXMhC9ErY26J23rDPyDZldIfPq/HpTTJ/tQ==
+"@fortawesome/react-fontawesome@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.2.2.tgz#68b058f9132b46c8599875f6a636dad231af78d4"
+  integrity sha512-EnkrprPNqI6SXJl//m29hpaNzOp1bruISWaOiRtkMi/xSvHJlzc2j2JAYS7egxt/EbjSNV/k6Xy0AQI6vB2+1g==
   dependencies:
     prop-types "^15.8.1"
 
@@ -2394,11 +2394,6 @@ function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
-
-functional-red-black-tree@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
-  integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
 functions-have-names@^1.2.2:
   version "1.2.3"
