@@ -1,7 +1,7 @@
-import { client } from '~/libs/client'
-import { MicroCMSQueries } from 'microcms-js-sdk'
+import type { MicroCMSQueries } from "microcms-js-sdk";
+import { client } from "~/libs/client";
 
-const endpoint = 'posts' as const
+const endpoint = "posts" as const;
 
 const contents = {
   list: (queries?: MicroCMSQueries) =>
@@ -9,54 +9,54 @@ const contents = {
       endpoint,
       queries: {
         fields: [
-          'id',
-          'publishedAt',
-          'revisedAt',
-          'title',
-          'excerpt',
-          'tags.id',
-          'tags.name',
+          "id",
+          "publishedAt",
+          "revisedAt",
+          "title",
+          "excerpt",
+          "tags.id",
+          "tags.name",
         ],
         ...queries,
       },
     }),
-  get: (contentId: Content['id'], queries?: MicroCMSQueries) =>
+  get: (contentId: Content["id"], queries?: MicroCMSQueries) =>
     client.get<GetResponse>({
       endpoint,
       contentId,
       queries: {
         fields: [
-          'id',
-          'publishedAt',
-          'revisedAt',
-          'title',
-          'excerpt',
-          'body',
-          'tags.id',
-          'tags.name',
+          "id",
+          "publishedAt",
+          "revisedAt",
+          "title",
+          "excerpt",
+          "body",
+          "tags.id",
+          "tags.name",
         ],
         ...queries,
       },
     }),
-}
-export default contents
+};
+export default contents;
 
 export type Meta = Pick<
   Content,
-  'id' | 'publishedAt' | 'revisedAt' | 'title' | 'excerpt'
+  "id" | "publishedAt" | "revisedAt" | "title" | "excerpt"
 > & {
-  tags: Pick<Tag, 'id' | 'name'>[]
-}
+  tags: Pick<Tag, "id" | "name">[];
+};
 
-type ListResponse = Omit<PostsResponse, 'contents'> & {
-  contents: Meta[]
-}
+type ListResponse = Omit<PostsResponse, "contents"> & {
+  contents: Meta[];
+};
 
 export type GetResponse = Pick<
   Content,
-  'id' | 'publishedAt' | 'revisedAt' | 'title' | 'excerpt' | 'body'
+  "id" | "publishedAt" | "revisedAt" | "title" | "excerpt" | "body"
 > & {
-  tags: Pick<Tag, 'id' | 'name'>[]
-}
+  tags: Pick<Tag, "id" | "name">[];
+};
 
-export type Post = GetResponse
+export type Post = GetResponse;

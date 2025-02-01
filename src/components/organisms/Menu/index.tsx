@@ -1,11 +1,11 @@
-import React from 'react'
-import styles from './styles.module.scss'
-import Icon from '~/components/atoms/Icon'
-import Link from 'next/link'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+import type React from "react";
+import Icon from "~/components/atoms/Icon";
+import styles from "./styles.module.scss";
 
 interface P {
-  onClose: () => void
+  onClose: () => void;
 }
 
 const Menu: React.FC<P> = ({ onClose }) => {
@@ -13,7 +13,7 @@ const Menu: React.FC<P> = ({ onClose }) => {
     <div className={styles.component}>
       <header className={styles.header}>
         <Icon
-          icon={['fas', 'times']}
+          icon={["fas", "times"]}
           label="close"
           onClick={onClose}
           className={styles.close}
@@ -22,13 +22,13 @@ const Menu: React.FC<P> = ({ onClose }) => {
       <nav className={styles.nav}>
         <ul className={styles.links}>
           <li className={styles.link}>
-            <Link href="/">
-              <a onClick={onClose}>TOP</a>
+            <Link href="/" onClick={onClose}>
+              TOP
             </Link>
           </li>
           <li className={styles.link}>
-            <Link href="/about">
-              <a onClick={onClose}>ABOUT</a>
+            <Link href="/about" onClick={onClose}>
+              ABOUT
             </Link>
           </li>
           <li className={styles.link}>
@@ -39,7 +39,7 @@ const Menu: React.FC<P> = ({ onClose }) => {
             >
               LICENSE
               <FontAwesomeIcon
-                icon={['fas', 'external-link-alt']}
+                icon={["fas", "external-link-alt"]}
                 className={styles.external}
               />
             </a>
@@ -47,7 +47,7 @@ const Menu: React.FC<P> = ({ onClose }) => {
         </ul>
       </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

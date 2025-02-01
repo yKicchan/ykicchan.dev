@@ -1,5 +1,5 @@
-import React from 'react'
-import styles from './styles.module.scss'
+import type React from "react";
+import styles from "./styles.module.scss";
 
 const Footer: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
         &copy; 2020 yKicchan All Rights Reserved.
       </small>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

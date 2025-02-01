@@ -1,10 +1,10 @@
-import React from 'react'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
-import { darcula } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import type React from "react";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { darcula } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 interface P {
-  children: React.ReactNode
-  language?: string
+  children: React.ReactNode;
+  language?: string;
 }
 
 const CodeBlock: React.FC<P> = ({ language, children }) => {
@@ -12,7 +12,7 @@ const CodeBlock: React.FC<P> = ({ language, children }) => {
     <SyntaxHighlighter language={language} style={darcula}>
       {children}
     </SyntaxHighlighter>
-  )
-}
+  );
+};
 
-export default CodeBlock
+export default CodeBlock;

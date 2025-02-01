@@ -1,17 +1,17 @@
-import React from 'react'
-import styles from './styles.module.scss'
+import type React from "react";
+import styles from "./styles.module.scss";
 
 interface P {
-  children: React.ReactNode
-  className?: string
+  children: React.ReactNode;
+  className?: string;
 }
 
 const Tag: React.FC<P> = ({ children, className }) => {
   return (
-    <span className={`${styles.component} ${className || ''}`}>
+    <span className={`${styles.component} ${className || ""}`}>
       # {children}
     </span>
-  )
-}
+  );
+};
 
-export default Tag
+export default Tag;

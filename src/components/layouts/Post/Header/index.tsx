@@ -1,30 +1,31 @@
-import React, { useRef } from 'react'
-import styles from './styles.module.scss'
-import Card from '~/components/atoms/Card'
-import Tag from '~/components/atoms/Tag'
-import { useIntersection } from '~/hooks/useIntersection'
 import {
   FontAwesomeIcon,
-  FontAwesomeIconProps,
-} from '@fortawesome/react-fontawesome'
-import { Meta } from '~/libs/api/contents'
-import { format } from 'date-fns'
+  type FontAwesomeIconProps,
+} from "@fortawesome/react-fontawesome";
+import { format } from "date-fns";
+import type React from "react";
+import { useRef } from "react";
+import Card from "~/components/atoms/Card";
+import Tag from "~/components/atoms/Tag";
+import { useIntersection } from "~/hooks/useIntersection";
+import type { Meta } from "~/libs/api/contents";
+import styles from "./styles.module.scss";
 
 interface P {
-  meta: Meta
+  meta: Meta;
 }
 
 const Header: React.FC<P> = ({ meta }) => {
-  const ref = useRef<HTMLHeadingElement>(null)
-  const intersection = useIntersection(ref)
-  const revisedAt = format(new Date(meta.revisedAt), 'yyyy-MM-dd')
-  const publishedAt = format(new Date(meta.publishedAt), 'yyyy-MM-dd')
-  const time = revisedAt
-  const isRevised = meta.revisedAt !== meta.publishedAt
-  const timeIcon: FontAwesomeIconProps['icon'] = isRevised
-    ? ['fas', 'sync-alt']
-    : ['far', 'clock']
-  const timeTitle = isRevised ? `公開: ${publishedAt}\n更新: ${revisedAt}` : ''
+  const ref = useRef<HTMLHeadingElement>(null);
+  const intersection = useIntersection(ref);
+  const revisedAt = format(new Date(meta.revisedAt), "yyyy-MM-dd");
+  const publishedAt = format(new Date(meta.publishedAt), "yyyy-MM-dd");
+  const time = revisedAt;
+  const isRevised = meta.revisedAt !== meta.publishedAt;
+  const timeIcon: FontAwesomeIconProps["icon"] = isRevised
+    ? ["fas", "sync-alt"]
+    : ["far", "clock"];
+  const timeTitle = isRevised ? `公開: ${publishedAt}\n更新: ${revisedAt}` : "";
 
   return (
     <>
@@ -49,9 +50,9 @@ const Header: React.FC<P> = ({ meta }) => {
             <div className={styles.floatTitle} title={meta.title}>
               {meta.title}
             </div>
-            <button className={styles.floatButton}>
+            <button type="button" className={styles.floatButton}>
               <FontAwesomeIcon
-                icon={['fas', 'angle-down']}
+                icon={["fas", "angle-down"]}
                 className={styles.floatIcon}
               />
             </button>
@@ -59,7 +60,7 @@ const Header: React.FC<P> = ({ meta }) => {
         </header>
       )}
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

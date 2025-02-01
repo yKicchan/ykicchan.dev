@@ -1,6 +1,6 @@
-import React from 'react'
-import styles from './styles.module.scss'
-import Card from '~/components/atoms/Card'
+import type React from "react";
+import Card from "~/components/atoms/Card";
+import styles from "./styles.module.scss";
 
 const Profile: React.FC = () => {
   return (
@@ -27,7 +27,7 @@ const Profile: React.FC = () => {
         </p>
       </main>
     </Card>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

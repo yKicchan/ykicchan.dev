@@ -17,10 +17,10 @@ jobs:
         with:
           node-version: 12
       - name: インストール
-        run: yarn install
+        run: pnpm install
 
       - name: ビルド
         env:
           HOST: ${{ secrets.HOST }}
           API_KEY: ${{ secrets.API_KEY }}
-        run: yarn build
+        run: pnpm build

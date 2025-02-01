@@ -1,11 +1,9 @@
 {
-  "projectName": "BLOG",
+  "projectName": "ykicchan.dev",
   "projectOwner": "yKicchan",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "files": [
-    "README.md"
-  ],
+  "files": ["README.md"],
   "imageSize": 100,
   "commit": false,
   "commitConvention": "eslint",
@@ -15,37 +13,28 @@
       "name": "Yukiya Shiroma",
       "avatar_url": "https://avatars2.githubusercontent.com/u/27273218?v=4",
       "profile": "https://www.ykicchan.dev/",
-      "contributions": [
-        "code",
-        "content"
-      ]
+      "contributions": ["code", "content"]
     },
     {
       "login": "konojunya",
       "name": "Junya Kono",
       "avatar_url": "https://avatars1.githubusercontent.com/u/12035578?v=4",
       "profile": "https://twitter.com/konojunya",
-      "contributions": [
-        "code"
-      ]
+      "contributions": ["code"]
     },
     {
       "login": "ria3100",
       "name": "ria",
       "avatar_url": "https://avatars2.githubusercontent.com/u/11747541?v=4",
       "profile": "https://ria0130.dev/",
-      "contributions": [
-        "doc"
-      ]
+      "contributions": ["doc"]
     },
     {
       "login": "MeilCli",
       "name": "meil",
       "avatar_url": "https://avatars2.githubusercontent.com/u/2821921?v=4",
       "profile": "https://meilcli.net",
-      "contributions": [
-        "maintenance"
-      ]
+      "contributions": ["maintenance"]
     }
   ],
   "contributorsPerLine": 7,

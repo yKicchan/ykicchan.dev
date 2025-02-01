@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
-import styles from './styles.module.scss'
-import Card from '~/components/atoms/Card'
+import type React from "react";
+import { useState } from "react";
+import Card from "~/components/atoms/Card";
+import styles from "./styles.module.scss";
 
 interface P {
-  src: string
-  alt: string
-  level: string
+  src: string;
+  alt: string;
+  level: string;
 }
 
 const SkillCard: React.FC<P> = ({ src, alt, level }) => {
-  const [isFront, setIsFront] = useState(true)
-  const toggle = () => setIsFront(!isFront)
+  const [isFront, setIsFront] = useState(true);
+  const toggle = () => setIsFront(!isFront);
 
   return (
     <div
@@ -26,7 +27,7 @@ const SkillCard: React.FC<P> = ({ src, alt, level }) => {
         {level}
       </Card>
     </div>
-  )
-}
+  );
+};
 
-export default SkillCard
+export default SkillCard;

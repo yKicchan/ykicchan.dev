@@ -1,14 +1,14 @@
-import React from 'react'
-import Head from 'next/head'
+import Head from "next/head";
+import type React from "react";
 
 export interface OgpMeta {
-  title: string
-  description: string
-  path: string
+  title: string;
+  description: string;
+  path: string;
 }
 
 interface P {
-  meta: OgpMeta
+  meta: OgpMeta;
 }
 
 const ogp: React.FC<P> = ({ meta }) => {
@@ -20,16 +20,16 @@ const ogp: React.FC<P> = ({ meta }) => {
       <meta property="og:title" content={meta.title} />
       <meta
         property="og:url"
-        content={'https://www.ykicchan.dev' + meta.path}
+        content={`https://www.ykicchan.dev${meta.path}`}
       />
       <meta
         property="og:image"
         content="https://www.ykicchan.dev/assets/profile.png"
       />
       <meta property="og:site_title" content="yKicchan's blog" />
-      <meta property="og:site_name" content="www.ykicchan.dev"></meta>
+      <meta property="og:site_name" content="www.ykicchan.dev" />
     </Head>
-  )
-}
+  );
+};
 
-export default ogp
+export default ogp;

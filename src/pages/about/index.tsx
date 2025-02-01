@@ -1,16 +1,16 @@
-import { NextPage } from 'next'
-import styles from './styles.module.scss'
-import Profile from '~/components/organisms/Profile'
-import SkillCard from '~/components/molecules/SkillCard'
-import Head from 'next/head'
-import OGP from '~/components/ogp'
-import Icon from '~/components/atoms/Icon'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Icon from "~/components/atoms/Icon";
+import SkillCard from "~/components/molecules/SkillCard";
+import OGP from "~/components/ogp";
+import Profile from "~/components/organisms/Profile";
+import styles from "./styles.module.scss";
 
 const Page: NextPage = () => {
-  const title = "About - yKicchan's blog"
+  const title = "About - yKicchan's blog";
   const description =
-    'Web engineer.\n主な生息地は関西。\n声優の花澤香菜さんの大ファンで、たまにイベントに出没してます。\n宗教上の理由により JavaScript を卒業し、現在は TypeScript がメイン武器。'
-  const path = '/about'
+    "Web engineer.\n主な生息地は関西。\n声優の花澤香菜さんの大ファンで、たまにイベントに出没してます。\n宗教上の理由により JavaScript を卒業し、現在は TypeScript がメイン武器。";
+  const path = "/about";
 
   return (
     <>
@@ -50,13 +50,13 @@ const Page: NextPage = () => {
         <h3 className={styles.socialTitle}>Social</h3>
         <div className={styles.social}>
           <Icon
-            icon={['fab', 'twitter']}
+            icon={["fab", "twitter"]}
             label="Twitter"
             href="https://twitter.com/yKicchan"
             className={styles.socialLink}
           />
           <Icon
-            icon={['fab', 'github']}
+            icon={["fab", "github"]}
             label="GitHub"
             href="https://github.com/yKicchan"
             className={styles.socialLink}
@@ -91,7 +91,7 @@ const Page: NextPage = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

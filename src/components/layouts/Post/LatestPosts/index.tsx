@@ -1,10 +1,10 @@
-import React from 'react'
-import styles from './styles.module.scss'
-import Post from '~/components/organisms/Post'
-import { Meta } from '~/libs/api/contents'
+import type React from "react";
+import Post from "~/components/organisms/Post";
+import type { Meta } from "~/libs/api/contents";
+import styles from "./styles.module.scss";
 
 interface P {
-  metaList: Meta[]
+  metaList: Meta[];
 }
 
 const LatestPosts: React.FC<P> = ({ metaList }) => {
@@ -19,7 +19,7 @@ const LatestPosts: React.FC<P> = ({ metaList }) => {
         ))}
       </ul>
     </section>
-  )
-}
+  );
+};
 
-export default LatestPosts
+export default LatestPosts;

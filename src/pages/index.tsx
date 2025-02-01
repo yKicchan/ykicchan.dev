@@ -1,20 +1,20 @@
-import { NextPage, GetStaticProps } from 'next'
-import Head from 'next/head'
-import Post from '~/components/organisms/Post'
-import OGP from '~/components/ogp'
-import styles from './styles.module.scss'
-import contents, { Meta } from '~/libs/api/contents'
+import type { GetStaticProps, NextPage } from "next";
+import Head from "next/head";
+import OGP from "~/components/ogp";
+import Post from "~/components/organisms/Post";
+import contents, { type Meta } from "~/libs/api/contents";
+import styles from "./styles.module.scss";
 
 interface P {
-  metaList: Meta[]
+  metaList: Meta[];
 }
 
 const Index: NextPage<P> = ({ metaList }) => {
-  const latestMeta = metaList[0]
-  const title = "yKicchan's blog"
+  const latestMeta = metaList[0];
+  const title = "yKicchan's blog";
   const description = `Web エンジニアが気ままにアウトプットしてる技術ブログ。\n${
     latestMeta.title
-  }\n${latestMeta.tags.map((tag) => tag.name).join(', ')}`
+  }\n${latestMeta.tags.map((tag) => tag.name).join(", ")}`;
 
   return (
     <>
@@ -22,7 +22,7 @@ const Index: NextPage<P> = ({ metaList }) => {
         meta={{
           title,
           description,
-          path: '/',
+          path: "/",
         }}
       />
       <Head>
@@ -37,17 +37,17 @@ const Index: NextPage<P> = ({ metaList }) => {
         ))}
       </ul>
     </>
-  )
-}
+  );
+};
 
 export const getStaticProps: GetStaticProps<P> = async () => {
-  const res = await contents.list()
+  const res = await contents.list();
   return {
     props: {
       metaList: res.contents,
     },
     revalidate: 60,
-  }
-}
+  };
+};
 
-export default Index
+export default Index;

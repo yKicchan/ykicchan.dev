@@ -1,38 +1,39 @@
-import React, { useEffect, useState } from 'react'
-import Icon from '~/components/atoms/Icon'
-import styles from './styles.module.scss'
-import { Meta } from '~/libs/api/contents'
+import type React from "react";
+import { useEffect, useState } from "react";
+import Icon from "~/components/atoms/Icon";
+import type { Meta } from "~/libs/api/contents";
+import styles from "./styles.module.scss";
 
 interface P {
-  meta: Meta
+  meta: Meta;
 }
 
 const Footer: React.FC<P> = () => {
-  const [shareText, setShareText] = useState('')
-  const [url, setUrl] = useState('')
+  const [shareText, setShareText] = useState("");
+  const [url, setUrl] = useState("");
   useEffect(() => {
-    setShareText(document.title)
-    setUrl(location.href)
-  })
+    setShareText(document.title);
+    setUrl(location.href);
+  });
 
-  const [isShareable, setIsShareable] = useState(false)
+  const [isShareable, setIsShareable] = useState(false);
   useEffect(() => {
-    setIsShareable(!!navigator?.share)
-  })
+    setIsShareable(!!navigator?.share);
+  });
   const share = () => {
-    if (!isShareable) return
+    if (!isShareable) return;
     navigator
       .share({
         title: shareText,
         url: url,
       })
       .then(() => {
-        console.log('Thanks for sharing!')
+        console.log("Thanks for sharing!");
       })
       .catch(() => {
-        console.error('Failed share...')
-      })
-  }
+        console.error("Failed share...");
+      });
+  };
 
   // Todo: いいねの実装
   // const [liked, setLiked] = useState(false)
@@ -52,10 +53,10 @@ const Footer: React.FC<P> = () => {
       <h2 className={styles.title}>SHARE</h2>
       <div className={styles.icons}>
         {isShareable ? (
-          <Icon icon={['fas', 'share-alt']} label="Share" onClick={share} />
+          <Icon icon={["fas", "share-alt"]} label="Share" onClick={share} />
         ) : (
           <Icon
-            icon={['fab', 'twitter']}
+            icon={["fab", "twitter"]}
             label="twitter"
             href={`http://twitter.com/share?url=${url}&text=${shareText}&via=yKicchan`}
             className={styles.twitter}
@@ -69,7 +70,7 @@ const Footer: React.FC<P> = () => {
         {/*/>*/}
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

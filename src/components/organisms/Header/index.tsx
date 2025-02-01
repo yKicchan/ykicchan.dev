@@ -1,26 +1,27 @@
-import React, { useState } from 'react'
-import styles from './styles.module.scss'
-import Link from 'next/link'
-import Icon from '../../atoms/Icon'
-import Menu from '~/components/organisms/Menu'
+import Link from "next/link";
+import type React from "react";
+import { useState } from "react";
+import Menu from "~/components/organisms/Menu";
+import Icon from "../../atoms/Icon";
+import styles from "./styles.module.scss";
 
 const Header: React.FC = () => {
-  const [isShow, setIsShow] = useState(false)
+  const [isShow, setIsShow] = useState(false);
 
   return (
     <header className={styles.component}>
-      <Link href="/">
-        <a className={styles.title}>BLOG</a>
+      <Link href="/" className={styles.title}>
+        BLOG
       </Link>
       {isShow && <Menu onClose={() => setIsShow(false)} />}
       <Icon
         label="Menu"
-        icon={['fas', 'bars']}
+        icon={["fas", "bars"]}
         onClick={() => setIsShow(true)}
         className={styles.menu}
       />
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
