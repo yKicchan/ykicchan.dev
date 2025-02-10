@@ -26,7 +26,7 @@
     "react-dom": "^18.0.0",
     "react-markdown": "^8.0.3",
     "react-syntax-highlighter": "^15.5.0",
-    "rehype-raw": "^6.1.1",
+    "rehype-raw": "^7.0.0",
     "remark-gfm": "^3.0.1",
     "sass": "^1.51.0",
     "webpack": "^5.72.0"
